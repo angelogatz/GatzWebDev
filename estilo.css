@@ -3,7 +3,11 @@
 /*====================== Google - Fonts ===================*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
-
+/*====================== Dafonts ===================*/
+@font-face {
+    font-family: 'Azonix';
+    src: url(fonts/Azonix.otf) format('opentype');
+}
 /*====================== Root e media ===================*/
 :root{
     --header-height: 3rem;
@@ -100,8 +104,14 @@ img{
 
 .nav__logo{
     color: var(--title-color);
-    font-weight: 600;
+    font-weight: 500;
     margin-left: 5px;
+    font-family: 'Azonix';
+}
+
+.subscrito{
+    vertical-align: sub;
+    font-size: 8px;
 }
 
 @media screen and (max-width: 767px){
@@ -132,6 +142,7 @@ img{
     row-gap: .25rem;
     color: var(--title-color);
     font-weight: 600;
+    margin-top: 15px;
 }
 
 .nav__list{
@@ -156,3 +167,105 @@ img{
 .scroll-header{
     box-shadow: 0 1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
 }
+/*=============== Media Queries ===============*/
+/* Small devices */
+@media screen and (max-width: 320px){
+    .nav__name{
+        display: none;
+    }
+
+    .nav__list{
+        margin-left: -30px;
+    }
+}
+
+/* Medium devices */
+@media screen and (min-width: 576px){
+    .nav__list{
+        justify-content: center;
+        column-gap: 3rem;
+    }
+}
+
+@media screen and (min-width: 767px){
+    body{
+        margin: 0;
+    }
+
+    .section{
+        padding: 7rem 0 2rem;
+    }
+
+    .nav{
+        height: calc(var(--header-height) + 1.5rem);
+    }
+
+    .nav__img{
+        display: none;
+    }
+
+    .nav__icon{
+        display: none;
+    }
+
+    .nav__name{
+        font-size: var(--normal-font-size);
+    }
+
+    .nav__link:hover{
+        color: var(--first-color);
+    }
+
+    .active-link::before{
+         content: '';
+         position: absolute;
+         bottom: -.75rem;
+         width: 4px;
+         height: 4px;
+         background-color: var(--first-color);
+         border-radius: 50%;
+    }
+}
+
+/* Large devices */
+@media screen and (min-width: 1024px){
+    .container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    
+}
+
+/*=============== Dark/Light theme Buttons ===============*/
+.nav__btns{
+    display: flex;
+    align-items: center;
+}
+
+.change-theme{
+    font-size: 1.30rem;
+    color: var(--title-color);
+    cursor: pointer;
+}
+
+.change-theme:hover{
+    color: var(--first-color);
+}
+
+/*=============== Variaveis dark theme ===============*/
+body.dark-theme{
+    --hue: 205;
+    --sat: 94%;
+    --first-color: hsl(var(--hue), var(--sat), 50%, 100%);
+    --first-color-alt: hsl(var(--hue), var(--sat), 8%, 95%);
+    --title-color: hsl(var(--hue), 8%, 75%);
+    --text-color: hsl(var(--hue),29%, 16%);
+    --body-color: hsl(var(--hue), 28%, 12%);
+    --container-color: hsl(var(--hue), 29%, 16%);
+    transition: .5s ease;
+}
+
+/*========================================== Main Home ============================================*/
+
+
