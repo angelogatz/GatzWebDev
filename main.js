@@ -56,3 +56,31 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme)
     localStorage.setItem('selected-icon', getCurrentIcon)
 })
+
+/*====================== scroll reveal =========================*/
+window.addEventListener('load', reveal);
+
+function reveal(){
+    var reveals = document.querySelectorAll('.reveal');
+
+    for(var i = 0; i < reveals.length; i++){
+        var windowheight = window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top;
+        var revealpoint = 150;
+
+        if(revealtop < windowheight - revealpoint){
+            reveals[i].classList.add('active');
+        }
+        else{
+            reveals[i].classList.remove('active');
+        }
+    }
+}
+/*====================== scroll reveal =========================*/
+window.addEventListener('scroll', function () {
+    const parallax = document.querySelector('.parallax');
+    let scrollPosition = window.pageYOffset;
+
+    parallax.style.transform = 'translateY(' + scrollPosition * .2 + 'px)';
+});
+

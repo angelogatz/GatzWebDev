@@ -80,6 +80,11 @@ img{
     max-width: 968px;
     
 }
+
+.section__home{
+    height: 100vh;
+    
+}
 /*====================== Header ===================*/
 .header{
     position: fixed;
@@ -267,5 +272,79 @@ body.dark-theme{
 }
 
 /*========================================== Main Home ============================================*/
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1s ease;
+}
 
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
 
+.img-sec{
+    width: 500px;
+    margin: auto;
+}
+
+.img-sec1{
+    width: 450px;
+    margin: auto;
+}
+
+.home__img-sec{
+    display: flex;
+    justify-content: space-around;
+}
+/*=============== social icons ===============*/
+.social,
+.social__container,
+.social__content{
+    display: flex;
+}
+
+.social{
+   margin-top: -100px;
+   justify-content: center;
+   align-items: center;  
+}
+
+.social__content{
+    height: 40px;
+    width: 40px;
+    position: relative;
+    padding: 0;
+    margin: 0 1rem;
+    background-color: hsl(var(--hue), 29%, 90%);
+    border-radius: 1rem;
+    box-shadow: -2px -2px 8px #FAFAFF
+                 2px 2px 8px rgba(13,12,64,.2);
+    cursor: pointer;
+}
+
+.social__icon{
+    font-size: 2.25rem;
+    color: var(--first-color);
+    transform: translateY(-5px);
+    transition: .3s ease;
+}
+
+.social__icon:hover{
+    transform: translateY(0px);
+    transition: .3s ease;
+}
+
+.social__tooltip{
+    opacity: 0;
+    position: absolute;
+    padding: .5rem 1rem;
+    background-color: var(--first-color);
+    color: hsl(var(--hue), 29%, 90%);
+    font-size: var(--normal-font-size);
+    white-space: nowrap;
+    font-weight: 700;
+    border-radius: .5rem;
+    pointer-events: none;
+}
