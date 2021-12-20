@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!---------------------------------------- CSS --------------------------------------------->
     <link rel="stylesheet" href="main.css">
+    
     <title>Home | GatzWebDev</title>
 </head>
 <body>
@@ -23,7 +24,7 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#home" class="nav__link active-link">
+                        <a href="#" class="nav__link active-link">
                             <i class="uil uil-house-user nav__icon"></i>
                             <span class="nav__name">Home</span>
                         </a>
@@ -44,15 +45,16 @@
                     </li>
 
                     <li class="nav__item">
-                        <a href="#Contato" class="nav__link">
+                        <a href="#video" class="nav__link">
                             <i class="uil uil-comment-alt-dots nav__icon"></i>
-                            <span class="nav__name">Fale Conosco</span>
+                            <span class="nav__name">Video</span>
                         </a>
                     </li>
 
                     <div class="nav__btns">
                         <!-- theme change btn -->
-                        <i class="uil uil-moon change-theme" id="theme-btn"></i>
+                        
+                        <i class="uil uil-moon change-theme" id="theme-btn"></i> 
                     </div>
                 </ul>
             </div>
@@ -68,64 +70,208 @@
     
 
     <main>
-        <div class="parallax">
-            <section class="container section  section__home" id="home">
-                <div class="home__img-sec">
-                    <img src="assets/logo-vertical-gatz.png" alt="" class="reveal img-sec1">
-                </div>
-            </section>
-
-            <div class="social">
-                <div class="social__container">
-
-                    <div class="social__content">
-                        <i class="uil uil-instagram-alt social__icon"></i>
-                        <div class="social__tooltip">@gatzwebdeveloper</div>
+        
+            <div class="parallax">
+                <section class="container section  section__home" id="home">
+                    <div class="home__img-sec">
+                        <img src="assets/logo-vertical-gatz.png" alt="" class="reveal img-sec1" id="logo"
+                        >
                     </div>
-
-                    <div class="social__content">
-                        <i class="uil uil-github social__icon"></i>
-                        <div class="social__tooltip">angelogatz</div>
+                <br><br><br><br><br><br><br>
+                    <div class="social">
+                        <div class="social__container">
+                            <a href="https://www.instagram.com/gatzwebdeveloper/" target="_blank">
+                                <div class="social__content">
+                                    <i class="uil uil-instagram-alt social__icon"></i>
+                                    <div class="social__tooltip social__tooltip-left">@gatzwebdeveloper</div>
+                                </div>
+                            </a>
+                            <a href="https://github.com/angelogatz" target="_blank">
+                                <div class="social__content">
+                                    <i class="uil uil-github social__icon"></i>
+                                    <div class="social__tooltip social__tooltip-top">angelogatz</div>
+                                </div>
+                            </a>
+                            <a href="https://api.whatsapp.com/send?phone=5541996343999" target="_blank">
+                                <div class="social__content">
+                                    <i class="uil uil-whatsapp-alt social__icon"></i>
+                                    <div class="social__tooltip social__tooltip-right">Seg - sex 8:00 - 18:00</div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-
-                    <div class="social__content">
-                        <i class="uil uil-whatsapp-alt social__icon"></i>
-                        <div class="social__tooltip">Seg - sex 8:00 - 18:00</div>
-                    </div>
-
-                </div>
-
+                </section>
             </div>
-        </div>
+        
 
         
+    
          
-         
-
+<!---------------------------------------- SOBRE ----------------------------------------------->
         <!--=============== sobre ===============-->
-        <section class="container section section__height" id="Sobre">
-            <h2 class="section__title">About</h2>
-        </section>
+        <section class="container sobre section__home reveal_content" id="Sobre">
+            <div class="sobre__container container grid">
+                <div class="sobre__data">
+                    <h2 class="section__title sobre__title">Sobre nós</h2>
+                    <p class="sobre__descricao">A GatzWebDev, nasceu da necessidade de proporcionar ao seu negócio um novo ângulo de vista, em criar um ambiente que represente o conceito da sua empresa, um lugar que tenha o seu jeito, que seja a sua cara!
+                    </p>
+                    <a href="" class="button">Contate-nos <i class="uil uil-arrow-right"></i></a>
+                </div>
 
+                <div class="sobre__img">
+                    <div class="sobre__img-overlay">
+                        <img src="assets/site-alissa-vertical.jpg" alt="" class="sobre__img-one">
+                    </div>
+
+                    <div class="sobre__img-overlay">
+                        <img src="assets/site-pedrobarrosadvocacia-vertical.jpg" alt="" class="sobre__img-two">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+<!---------------------------------------- PORTFÓLIO ------------------------------------------->
         <!--=============== portfolio ===============-->
-        <section class="container section section__height" id="Portfólio">
-            <h2 class="section__title">Skills</h2>
+        <section class="container section  reveal_content" id="Portfólio">
+            <h2 class="section__title">Alguns de nossos Melhores <br> sites ja feitos</h2>
+
+            <div class="swiper portfolio__container">
+                <div class="swiper-wrapper">
+                    <!--=============== portfolio - lista 1 ===============-->
+                    <div class="portfolio__card swiper-slide">
+                        <img src="assets/imagens-card-portfolio/deluxe-mgh-horizontal.png" alt="" class="portfolio__img">
+                        <div class="portfolio__data">
+                            <h2 class="portfolio__title">Deluxe</h2>
+                            <span class="portfolio__descricao">Salão megahair</span>
+                        </div>
+                    </div>
+
+                    <!--=============== portfolio - lista 2 ===============-->
+                    <div class="portfolio__card swiper-slide">
+                        <img src="assets/imagens-card-portfolio/mag-adv-horizontal.png" alt="" class="portfolio__img">
+                        <div class="portfolio__data">
+                            <h2 class="portfolio__title">Mag</h2>
+                            <span class="portfolio__descricao">Advocacia</span>
+                        </div>
+                    </div>
+
+                    <!--=============== portfolio - lista 3 ===============-->
+                    <div class="portfolio__card swiper-slide">
+                        <img src="assets/imagens-card-portfolio/portasjr-horizontal.png" alt="" class="portfolio__img">
+                        <div class="portfolio__data">
+                            <h2 class="portfolio__title">JrPortas</h2>
+                            <span class="portfolio__descricao">Portas automáticas</span>
+                        </div>
+                    </div>
+
+                    <!--=============== portfolio - lista 4 ===============-->
+                    <div class="portfolio__card swiper-slide">
+                        <img src="assets/imagens-card-portfolio/site alissa horizontal.png" alt="" class="portfolio__img">
+                        <div class="portfolio__data">
+                            <h2 class="portfolio__title">Alissa Nomura</h2>
+                            <span class="portfolio__descricao">Designer Gráfico</span>
+                        </div>
+                    </div>
+
+                    <!--=============== portfolio - lista 5 ===============-->
+                    <div class="portfolio__card swiper-slide">
+                        <img src="assets/imagens-card-portfolio/pedro-barros-horizontal.png" alt="" class="portfolio__img">
+                        <div class="portfolio__data">
+                            <h2 class="portfolio__title">Pedro Barros</h2>
+                            <span class="portfolio__descricao">Advocacia</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="video__description">Segure e arraste para o lado
+                </p>
+            </div>
         </section>
 
-        <!--=============== Contato ===============-->
-        <section class="container section section__height" id="Contato">
-            <h2 class="section__title">Fale Conosco</h2>
+        <!--=============== video ===============-->
+        <section class="video section reveal_content">
+            <h2 class="section__title">Como funciona a Responsividade?</h2>
+
+            <div class="video__container container" id="video">
+                <p class="video__description">Veja no video a baixo, a responsividade entre dispositivos, onde seu site será compatível com qualquer outro dispositivo.
+                </p>
+
+                <div class="video__content" >
+                    <video id="video-file">
+                        <source src="assets/Site-Alissa.mp4" type="video/mp4" >
+                    </video>
+
+                    <button class="button button--flex video__button" id="video-button">
+                        <i class="uil uil-caret-right video__button-icon" id="video-icon"></i>
+                    </button>
+                </div>
+            </div>
         </section>
     </main>
-    <!---------------------------------------- SOBRE ----------------------------------------------->
-    <!---------------------------------------- PORTFÓLIO ------------------------------------------->
-    <!---------------------------------------- CONTATO --------------------------------------------->
+    <!---------------------------------------- scroll up --------------------------------------------->
+     <!--========== SCROLL UP ==========-->
+     <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+    
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <div class="footer__content grid">
+                <div class="footer__data">
+                    <h3 class="footer__title">Inicie o seu Ambiente</h3>
+                    <p class="footer__description">A expansão dos seus limites <br> e o alcance de um novo  público <br> esta aqui!
+                    </p>
+                    <div>
+                        <a href="https://api.whatsapp.com/send?phone=5541996343999" target="_blank" class="footer__social">
+                            <i class="uil uil-whatsapp"></i>
+                        </a>
+                        <a href="https://github.com/angelogatz" target="_blank" class="footer__social">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
+                        <a href="https://www.instagram.com/gatzwebdeveloper/" target="_blank" class="footer__social">
+                            <i class="uil uil-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">Sobre</h3>
+                    <ul>
+                        <li class="footer__item">
+                            <a href="#Sobre" class="footer__link">Sobre nós</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#Portfólio" class="footer__link">Alguns trabalhos</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">Responsividade</h3>
+                    <ul>
+                        <li class="footer__item">
+                            <a href="#video" class="footer__link">Video</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__rights">
+                <p class="footer__copy">&#169; 2021 GatzWebDeveloper</p>
+                <div class="footer__terms">
+                    <a href="#" class="footer__terms-link">Terms & Agreements</a>
+                    <a href="#" class="footer__terms-link">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!---------------------------------------- JS --------------------------------------------->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
     <script src="js/scrollreveal.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
 

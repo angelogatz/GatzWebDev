@@ -31,7 +31,6 @@ window.addEventListener('scroll', scrollHeader)
 const themeButton = document.getElementById('theme-btn')
 const darkTheme = 'dark-theme'
 const iconTheme = 'uil-sun'
-
 //Topico selecionado previamente (Se o usuário selecionar)
 
 const selectedTheme = localStorage.getItem('selected-theme')
@@ -57,6 +56,30 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon)
 })
 
+
+let image_tracker = 'ld';
+
+
+themeButton.addEventListener('click', () =>{
+    
+
+    let image = document.getElementById('logo');
+    if(image_tracker=='ld') {
+        image.src ='assets/logo-vertical-gatz-branco.png';
+        image_tracker = 'll';
+        
+    } else {
+        image.src = 'assets/logo-vertical-gatz.png';
+        image_tracker = 'ld';
+        
+    }
+})
+
+
+
+        
+
+
 /*====================== scroll reveal =========================*/
 window.addEventListener('load', reveal);
 
@@ -81,6 +104,78 @@ window.addEventListener('scroll', function () {
     const parallax = document.querySelector('.parallax');
     let scrollPosition = window.pageYOffset;
 
-    parallax.style.transform = 'translateY(' + scrollPosition * .2 + 'px)';
+    parallax.style.transform = 'translateY(' + scrollPosition * .1 + 'px)';
 });
 
+/*============================ Image Switch Swiper=================================*/
+
+var swiper = new Swiper(".portfolio__container", {
+    effect: "cards",
+    grabCursor: true,
+    loop: true,
+    autoplay: true,
+  });
+
+/*============================ Video Player=================================*/
+
+  const videoFile = document.getElementById('video-file'),
+      videoButton = document.getElementById('video-button'),
+      videoIcon = document.getElementById('video-icon')
+
+function playPause(){ 
+    if (videoFile.paused){
+        // Play video
+        videoFile.play()
+        // We change the icon
+        videoIcon.classList.add('uil-pause')
+        videoIcon.classList.remove('uil-caret-right')
+    }
+    else {
+        // Pause video
+        videoFile.pause(); 
+        // We change the icon
+        videoIcon.classList.remove('uil-pause')
+        videoIcon.classList.add('uil-caret-right')
+
+    }
+}
+videoButton.addEventListener('click', playPause)
+
+function finalVideo(){
+    // Video ends, icon change
+    videoIcon.classList.remove('uil-pause')
+    videoIcon.classList.add('uil-caret-right')
+}
+// ended, when the video ends
+videoFile.addEventListener('ended', finalVideo)
+
+
+/*============================ Video Player =================================*/
+
+
+window.addEventListener('scroll', reveal_content);
+
+function reveal_content(){
+    var reveals = document.querySelectorAll('.reveal_content');
+
+    for(var i = 0; i < reveals.length; i++){
+        var windowheight = window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top;
+        var revealpoint = 150;
+
+        if(revealtop < windowheight - revealpoint){
+            reveals[i].classList.add('active');
+        }
+        else{
+            reveals[i].classList.remove('active');
+        }
+    }
+}
+/*============================ scroll up =================================*/
+
+function scrollUp(){
+    const scrollUp = document.getElementById('scroll-up');
+    // When the scroll is higher than 200 viewport height, add the show-scroll class to the a tag with the scroll-top class
+    if(this.scrollY >= 200) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+}
+window.addEventListener('scroll', scrollUp)
